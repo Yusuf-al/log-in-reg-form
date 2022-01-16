@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1ff1468ca7.js" crossorigin="anonymous"></script>
+
+    <title>Rise Doudt</title>
+</head>
+<body>
+<main>
+    <section id="sec">
+        <div class="form-box-heading">
+            <div class="heading">
+                <h3 id="logInBtn" onclick="logInForm()" class="active" >Log In</h3>
+                <h3 id="RegBtn" onclick="RegForm()">Registration</h3>
+            </div>
+            <h1><i class="fa fa-user"></i></h1>
+        </div>
+        <div class="form">
+            <form id="LogIn" class="form-input log-in-from">
+                <input type="email" placeholder="Your Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+            <form id="Reg" class="form-input reg-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</main>    
+</body>
+</html>
+
+<script>
+let logIn = document.getElementById('logInBtn');
+let RegBtn = document.getElementById('RegBtn');
+let logSec =document.getElementById('LogIn');
+let regSec = document.getElementById('Reg');
+let section = document.getElementById('sec');
+
+function logInForm(){
+    RegBtn.classList.remove("active");
+    logIn.classList.add("active");
+    logSec.style.left ="0px";
+    regSec.style.left ="500px";
+    section.style.height="400px"
+    
+
+}
+function RegForm(){
+    RegBtn.classList.add("active");
+    logIn.classList.remove("active");
+    logSec.style.left ="-500px";
+    regSec.style.left ="0px";
+    section.style.height="500px"
+}
+
+
+</script>
